@@ -1,0 +1,117 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light gray background for contrast */
+    display: flex;
+    flex-direction: column; /* Stack header, container, and footer */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+header {
+    background-color: #4CAF50; /* Green background for the header */
+    width: 100%; /* Full width header */
+    padding: 20px 0; /* Padding for header */
+    text-align: center; /* Center text in header */
+    color: white; /* White text color */
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column; /* Stack title and nav */
+}
+
+h1 {
+    margin-bottom: 10px; /* Margin below title */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+}
+
+nav ul li {
+    display: inline; /* Inline list items */
+    margin: 0 15px; /* Margin between list items */
+}
+
+nav a {
+    color: rgb(8, 0, 0); /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+    text-align:center;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.container {
+    background-color: #fff; /* White background for form container */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Fixed width */
+    text-align: center; /* Centered text */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Spacing between form fields */
+}
+
+label {
+    display: block; /* Labels on their own line */
+    margin-bottom: 5px;
+    color: #555; /* Gray color for labels */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4CAF50; /* Green border on focus */
+}
+
+button {
+    background-color: #4CAF50; /* Green button */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+footer {
+    background-color: #333; /* Dark footer background */
+    color: white; /* White text in footer */
+    text-align: center; /* Centered text */
+    padding: 15px 0; /* Padding for footer */
+    position: absolute; /* Fixed position at bottom */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width footer */
+}
+
+.footer-container {
+    max-width: 800px; /* Limit width of footer content */
+    margin: 0 auto; /* Center footer content */
+}

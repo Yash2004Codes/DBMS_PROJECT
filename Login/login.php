@@ -1,4 +1,6 @@
-session_start();
+<?php
+session_start(); // Start the session at the very beginning
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
@@ -40,11 +42,18 @@ session_start();
             <input type="password" id="password" name="password" required>
 
             <button type="submit">Login</button>
+            <p>Not registered? <a href="../register/register.php">Create an account</a></p>
         </form>
-        <p>Not registered? <a href="../register/register.php">Create an account</a></p>
+       
 
     </div>
    
-   <?php include("../common/footer.php")  ?>
+  
+   <!-- Footer -->
+<footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Swachh Bharat Online. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

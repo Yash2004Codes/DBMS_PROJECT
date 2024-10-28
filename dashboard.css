@@ -1,0 +1,126 @@
+/* Reset some default browser styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+header {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 20px 0; /* Padding for header */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto; /* Center the container */
+}
+
+.logo h1 {
+    margin: 0; /* Remove default margin */
+}
+
+nav ul {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 20px; /* Space between menu items */
+}
+
+nav ul li a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make text bold */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+main {
+    padding: 20px; /* Padding for main content */
+    background-color: #ffffff; /* White background for main */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px; /* Space above main */
+}
+
+h2 {
+    color: #333; /* Darker text for headings */
+}
+
+section {
+    margin-bottom: 20px; /* Space between sections */
+}
+
+form {
+    margin-bottom: 20px; /* Space below form */
+}
+
+form label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space below labels */
+}
+
+form input[type="text"],
+form textarea,
+form input[type="file"] {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below inputs */
+}
+
+form button {
+    background-color: #4CAF50; /* Button background */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold; /* Bold text for button */
+}
+
+form button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+table {
+    width: 100%; /* Full width for tables */
+    border-collapse: collapse; /* Merge borders */
+}
+
+th, td {
+    padding: 10px; /* Padding for table cells */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Light gray border at the bottom */
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray background for header */
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9; /* Highlight row on hover */
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack menu items on small screens */
+        margin: 10px 0; /* Space between items */
+    }
+
+    form input[type="text"],
+    form textarea,
+    form input[type="file"] {
+        font-size: 14px; /* Smaller font on small screens */
+    }
+
+    form button {
+        width: 100%; /* Full width buttons on small screens */
+    }
+}

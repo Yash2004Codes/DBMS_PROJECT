@@ -26,7 +26,7 @@ $stmt->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
     <title>User Dashboard</title>
 </head>
 <body>
@@ -68,18 +68,18 @@ $stmt->close();
                 <thead>
                     <tr>
                         <th>Location</th>
-                        <th>Description</th>
-                        <th>Status</th>
+                        <th>Description</th><td>
+                        <th>Status</th><td>
                         <th>Date Filed</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($complaints as $complaint): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($COMPLAINTS['LOCATION']); ?></td>
-                            <td><?php echo htmlspecialchars($complaints['DESCRIPTION']); ?></td>
-                            <td><?php echo htmlspecialchars($complaints['STATUS']); ?></td>
-                            <td><?php echo htmlspecialchars($complaints['date_filed']); ?></td>
+                            <td><?php echo htmlspecialchars($complaint['LOCATION']); ?></td>
+                            <td><?php echo htmlspecialchars($complaint['ISSUE']); ?></td><td>
+                            <td><?php echo htmlspecialchars($complaint['STATUS']); ?></td></td>
+                            <td>  <td><?php echo htmlspecialchars($complaint['FILED_DATETIME']); ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -88,5 +88,6 @@ $stmt->close();
     </main>
 </body>
 </html>
+
 
 

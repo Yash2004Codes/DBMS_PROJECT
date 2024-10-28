@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -6,15 +7,51 @@ body {
     padding: 0;
 }
 
-.container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* Header Styles */
+header {
+    background-color: #4CAF50; /* Green background */
+    padding: 20px 0; /* Vertical padding for header */
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: auto; /* Center the container */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Vertically center the items */
+}
+
+.logo h1 {
+    color: white; /* White text for logo */
+    font-size: 2.5em; /* Larger font size for logo */
+    margin: 0; /* Remove default margin */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Flexbox for horizontal layout */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between nav items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text for nav links */
+    font-size: 1.2em; /* Larger font size for nav links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    color: #ffeb3b; /* Yellow color on hover */
+}
+
+/* Additional Styles */
 h2 {
     text-align: center;
     margin-bottom: 20px;

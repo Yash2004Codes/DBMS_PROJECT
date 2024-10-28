@@ -15,15 +15,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $description = trim($_POST['description']);
     $status = "Pending"; // Default status
 
-    /*
+    
     // Handle file upload
-    $media = null;
-    if (!empty($_FILES['media']['name'])) {
-        $target_dir = "uploads/"; // Ensure this directory exists and is writable
-        $target_file = $target_dir . basename($_FILES["media"]["name"]);
-        move_uploaded_file($_FILES["media"]["tmp_name"], $target_file);
-        $media = $target_file; // Store the file path in the database
-    }*/
+    $targetDir = "media/";
+    $filePath = null;
+    
+    if (isset($_FILES['media']) && $_FILES['media']['error'] == 0) {
+        $fileName = basename($_FILES['media']['name']);
+        $filePath = $targetDir . time() . "_" . $fileName;
+    
+        // Move file to the target directory
+        if (!move_uploaded_file($_FILES['media']['tmp_name'], $filePath)) {
+            echo "File upload failed.";
+            exit();
+        }
+    }
 
     // Insert complaint into the database
     $stmt = $conn->prepare("INSERT INTO complaints (LOCATION,ISSUE,FILED_DATETIME,UID) VALUES (?, ?, NOW(),?)");
