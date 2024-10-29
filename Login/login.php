@@ -45,7 +45,8 @@ session_start(); // Start the session at the very beginning
             <p>Not registered? <a href="../register/register.php">Create an account</a></p>
         </form>
        
-
+<!-- Admin Login Option -->
+<p>Are you an admin? <a href="../admin/admin_login.php">Login as admin</a>.</p>
     </div>
    
   
