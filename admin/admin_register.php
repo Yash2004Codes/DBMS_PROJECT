@@ -15,20 +15,15 @@ if (isset($_SESSION['error'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="../register/register.css">
+    <link rel="stylesheet" href="admin_register.css">
 </head>
 
 <body>
-<div class="header-container">
-            <h1>Swachh Bharat Online</h1>
-            <nav>
-                <ul>
-                    <li><a href="../index.php">Home</a></li>
-                    <li><a href="../Login/login.php">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="login-header">
+    <h1>Welcome to Swachh Bharat Online Complaint Management Portal</h1>
+    <p>Your Voice for a Cleaner India. Log in to Join the Mission!</p>
+</header> 
+
 
 
 

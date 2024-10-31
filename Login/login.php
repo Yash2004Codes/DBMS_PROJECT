@@ -12,16 +12,15 @@ session_start(); // Start the session at the very beginning
 </head>
 
 <body>
+<header class="login-header">
+    <h1>Welcome to Swachh Bharat Online Complaint Management Portal</h1>
+    <p>Your Voice for a Cleaner India. Log in to Join the Mission!</p>
+</header> 
 <div class="container">
         <h2>Login</h2>
         
         <?php if (isset($_SESSION['success'])): ?>
-    <div class="success-message">
-        <?php
-        echo $_SESSION['success'];
-        //unset($_SESSION['success']); // Clear the message after displaying
-        ?>
-    </div>
+    
 <?php endif; ?>
 
         <!-- Display error messages if any -->

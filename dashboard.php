@@ -38,6 +38,7 @@ $stmt->close();
             <nav>
                 <ul>
                     <li><a href="index.php">Home</a></li>
+                    <li><a href="map.html">Map</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>

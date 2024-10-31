@@ -19,21 +19,16 @@ if (isset($_SESSION['error'])) {
 </head>
 
 <body>
-<div class="header-container">
-            <h1>Swachh Bharat Online</h1>
-            <nav>
-                <ul>
-                    <li><a href="../index.php">Home</a></li>
-                    <li><a href="../Login/login.php">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+<header class="login-header">
+    <h1>Welcome to Swachh Bharat Online Complaint Management Portal</h1>
+    <p>Your Voice for a Cleaner India. Log in to Join the Mission!</p>
+</header> 
 
 
 
 <div class="container">
-    <h2>Register</h2>
+    <h2>Registration for Users</h2>
     <form action="register_logic.php" method="POST">
         <div class="form-group">
             <label for="username">Username:</label>
@@ -43,8 +38,14 @@ if (isset($_SESSION['error'])) {
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" required>
         </div>
-        
-        
+        <div class="form-group">
+                <label for="Email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="Phone Number">Phone Number:</label>
+                <input type="tel" name="phone" id="phone">
+            </div>
         <button type="submit">Register</button>
         
     </form>

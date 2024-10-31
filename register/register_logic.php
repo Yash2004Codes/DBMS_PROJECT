@@ -7,10 +7,12 @@ include("../database.php"); // Database connection
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
+    $phone = trim($_POST['phone']);
+    $email = trim($_POST['email']);
    
-    echo"username={$username} <br>";
-    echo"password={$password} <br>";
-
+    //echo"username={$username} <br>";
+    //echo"password={$password} <br>";
+    
     // Validate inputs
     if (empty($username) || empty($password)) {
         $_SESSION['error'] = "All fields are required.";
@@ -34,12 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $hashed_password = password_hash($password,PASSWORD_BCRYPT);
 
     // Insert the new user
-    $stmt = $conn->prepare("INSERT INTO USER (NAME, PASSWORD)
-                           VALUES (?,?)");
-    $stmt->bind_param("ss", $username, $hashed_password);
+    $stmt = $conn->prepare("INSERT INTO USER (NAME,PASSWORD,Phone,Email)
+                           VALUES (?,?,?,?)");
+    $stmt->bind_param("ssss", $username, $hashed_password,$phone,$email);
 
     if ($stmt->execute()) {
-        echo "Registration successful! You can log in now.";
+        echo "<p style='color:green;font-weight:bold;'>Registration successful! You can log in now.</p>" ;
         //header("Location: ../Login/login.php");
     } else {
         $_SESSION['error'] = "Registration failed.";

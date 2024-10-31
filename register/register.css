@@ -1,117 +1,141 @@
-/* Basic Reset */
-* {
+/* Reset some default browser styles */
+body, h1, h2, p {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+/* Basic body styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Light gray background for contrast */
+    font-family: Arial, sans-serif; /* Use a clean font */
+    background-color: #f4f4f4; /* Light gray background */
     display: flex;
-    flex-direction: column; /* Stack header, container, and footer */
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
+    flex-direction: column;
+    min-height: 50vh; /* Make the body take the full height */
 }
 
-header {
-    background-color: #4CAF50; /* Green background for the header */
-    width: 100%; /* Full width header */
-    padding: 20px 0; /* Padding for header */
-    text-align: center; /* Center text in header */
-    color: white; /* White text color */
+/* Header styling */
+.login-header {
+    text-align: center;
+    padding: 50px; /* Increased padding for more space */
+    background: linear-gradient(135deg, #d9751d, #83d497); /* Gradient background */
+    color: rgb(24, 18, 194); /* White text */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    margin-bottom: 30px; /* Space below header */  
+    margin-left:0; /* Centering header */
+    margin-right:0; /* Centering header */
 }
 
-.header-container {
-    display: flex;
-    flex-direction: column; /* Stack title and nav */
+.login-header h1 {
+    font-size: 2.5em; /* Adjust font size */
+    margin: 0; /* Remove margin */
+    font-weight: bold; /* Bold font weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
 }
 
-h1 {
-    margin-bottom: 10px; /* Margin below title */
+.login-header p {
+    font-size: 1.5em; /* Font size for paragraph */
+    margin-top: 10px; /* Space above paragraph */
+    color: #f3f3f5; /* Light gray color */
+    line-height: 1.5; /* Line height for better readability */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
 }
+
 
 nav ul {
-    list-style: none; /* Remove bullet points */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for navigation */
 }
 
 nav ul li {
-    display: inline; /* Inline list items */
-    margin: 0 15px; /* Margin between list items */
+    margin-left: 20px; /* Space between navigation items */
 }
 
-nav a {
-    color: rgb(8, 0, 0); /* White text for links */
-    text-decoration: none; /* Remove underline from links */
-    text-align:center;
+nav ul li a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
 }
 
-nav a:hover {
+nav ul li a:hover {
     text-decoration: underline; /* Underline on hover */
 }
 
+/* Container for the form */
 .container {
-    background-color: #fff; /* White background for form container */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 400px; /* Fixed width */
-    text-align: center; /* Centered text */
+    background-color: white; /* White background for form container */
+    padding: 30px; /* Padding inside container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 50px auto; /* Center the container */
+    max-width: 500px; /* Max width for the container */
 }
 
+/* Form elements styling */
 h2 {
-    margin-bottom: 20px;
-    color: #333; /* Dark text color */
-}
-
-.form-group {
-    margin-bottom: 15px; /* Spacing between form fields */
+    text-align: center; /* Center title */
+    margin-bottom: 20px; /* Space below the title */
 }
 
 label {
-    display: block; /* Labels on their own line */
-    margin-bottom: 5px;
-    color: #555; /* Gray color for labels */
+    display: block; /* Each label takes a full line */
+    margin-bottom: 5px; /* Space below labels */
 }
 
 input[type="text"],
+input[type="email"],
+input[type="tel"],
 input[type="password"] {
     width: 100%; /* Full width inputs */
     padding: 10px; /* Padding inside inputs */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 4px; /* Slightly rounded corners */
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-    border-color: #4CAF50; /* Green border on focus */
+    margin-bottom: 20px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in width */
+    height: 40px; 
 }
 
 button {
-    background-color: #4CAF50; /* Green button */
-    color: white; /* White text */
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside button */
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
     border: none; /* No border */
-    padding: 10px 15px; /* Padding for button */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Larger text */
 }
 
 button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
 
+/* Error and success messages styling */
+.success-message, .error-message {
+    padding: 10px; /* Padding inside messages */
+    margin-bottom: 20px; /* Space below messages */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.success-message {
+    background-color: #dff0d8; /* Light green background */
+    color: #3c763d; /* Dark green text */
+}
+
+.error-message {
+    background-color: #f2dede; /* Light red background */
+    color: #a94442; /* Dark red text */
+}
+
+/* Footer styling */
 footer {
     background-color: #333; /* Dark footer background */
     color: white; /* White text in footer */
     text-align: center; /* Centered text */
-    padding: 15px 0; /* Padding for footer */
+    padding: 10px 0; /* Padding for footer */
     position: absolute; /* Fixed position at bottom */
-    bottom: 0; /* Align to bottom */
+    bottom: -250; /* Align to bottom */
     width: 100%; /* Full width footer */
-}
-
-.footer-container {
-    max-width: 800px; /* Limit width of footer content */
-    margin: 0 auto; /* Center footer content */
 }
